@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'org.alking'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
