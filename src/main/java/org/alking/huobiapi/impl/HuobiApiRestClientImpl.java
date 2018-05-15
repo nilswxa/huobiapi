@@ -112,7 +112,7 @@ public class HuobiApiRestClientImpl implements HuobiApiRestClient{
         return err;
     }
 
-    private <T extends HuobiResp> T executeReq(Request request, Class<T> clazz)throws HuobiApiException{
+    protected <T extends HuobiResp> T executeReq(Request request, Class<T> clazz)throws HuobiApiException{
         Call call =  httpClient.newCall(request);
         try {
             Response response = call.execute();
@@ -148,7 +148,7 @@ public class HuobiApiRestClientImpl implements HuobiApiRestClient{
     }
 
 
-    private Request buildRequest(String url, Object post) {
+    protected Request buildRequest(String url, Object post) {
 
         Request.Builder builder = new Request.Builder().url(url);
         Map<String, String> map = new HashMap<>();
@@ -170,7 +170,7 @@ public class HuobiApiRestClientImpl implements HuobiApiRestClient{
         return builder.build();
     }
 
-    private <T extends HuobiResp> T httpGetPost(String host, String path, Map<String,String> queryMap, Object post, Class<T> clazz) throws HuobiApiException{
+    protected <T extends HuobiResp> T httpGetPost(String host, String path, Map<String,String> queryMap, Object post, Class<T> clazz) throws HuobiApiException{
         String query = null;
         try {
             query = HuobiUtil.buildQuery(queryMap);
