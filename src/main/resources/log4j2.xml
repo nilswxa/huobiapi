@@ -6,7 +6,7 @@
             <PatternLayout pattern="[%p] %d (%F,%L) %m%n"/>
         </Console>
 
-        <RollingFile name="RollingFile" fileName="/mnt/log/huobi.log" filePattern="/mnt/log/huobi-%d{yyyy-MM-dd}-%i.log">
+        <!--RollingFile name="RollingFile" fileName="/mnt/log/huobi.log" filePattern="/mnt/log/huobi-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout>
                 <Pattern>[%p] %d (%F,%L) %m%n</Pattern>
             </PatternLayout>
@@ -14,7 +14,7 @@
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="16 MB"/>
             </Policies>
-        </RollingFile>
+        </RollingFile-->
 
     </Appenders>
 
